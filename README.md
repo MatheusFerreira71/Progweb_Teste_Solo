@@ -5,7 +5,6 @@
     <li><a href="https://code.visualstudio.com/">Visual Studio Code</a>: versão >= 1.42</li>
     <li><a href="https://www.mongodb.com/">MongoDB</a>: versão >= 4.2.3</li>
 </ul>
-_______________________________________________________________________________________________
 
 Tenha certeza que o mongo está ativo no seus serviços.
 
@@ -29,8 +28,5 @@ Execute os comandos na ordem.
 Apartir daqui seu projeto estara no ar, para finalizá-lo aperte ctrl + c em seu terminal e em seguida S, ele será finalizado. 
 
 <h1>Configurando a conexão com o Banco</h1>
-
-
-______________________________________________________________________________________________________________
 
 Special Thanks to <a href="https://github.com/faustocintra">Fausto Cintra</a> que forneceu seu conhecimento para nós.
