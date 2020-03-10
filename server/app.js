@@ -8,6 +8,10 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+// Importamos o código do módulo database e usamos a função connection para conectar ao banco de dados.
+import database from './config/database';
+database.connection('mongodb://localhost:27017/Techweek');
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
