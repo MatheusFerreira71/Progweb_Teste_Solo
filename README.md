@@ -54,4 +54,14 @@ Dê uma olhada nos códigos dessa pasta para ver um exemplo de como ficaram seus
 Partiremos agora para as engrenagens do back-end, aqui criaremos todos os métodos para manusear os dados no banco,
 como criar, apagar, listar e atualizar, o famoso CRUD. Cheque a pasta controllers para ver os códigos.
 
+<h1>Criação das Rotas</h1>
+
+E por fim a criação das rotas, essas rotas deverão ser criadas na pasta routes e inicialisadas no app.js. Verifique os exemplos para mais informações.
+
+<h1>Execução de Testes</h1>
+
+Agora devemos testar, baixe qualquer programa de API REST para fazer seus testes, no meu caso estou usando o <a href="https://insomnia.rest/download/">Insomnia</a>
+Crie suas rotas como o localhost e o prefixo da rota, por exemplo: http://locahost:3000/palestra
+Agora é só fazer os testes, não se esqueça de que os métodos, post, put e delete estão com corpo json, não se esqueça de adicionar corpo a sua requisição. Com isso finalizamos o back-end.
+
 Special Thanks to <a href="https://github.com/faustocintra">Fausto Cintra</a> que forneceu seu conhecimento para nós.

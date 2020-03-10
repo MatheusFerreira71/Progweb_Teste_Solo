@@ -10,7 +10,7 @@ const schema = mongoose.Schema({
         required: true
     },
     participante: {
-        type: String, 
+        type: Object, 
         required: true
     }
 });

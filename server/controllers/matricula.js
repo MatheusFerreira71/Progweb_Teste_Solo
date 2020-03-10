@@ -1,4 +1,6 @@
 const Matricula = require('../models/Matricula');
+const Participante = require('../models/Participante');
+const Palestra = require('../models/Palestra');
 
 module.exports = {
     novo: async (req, res) => {
@@ -17,6 +19,10 @@ module.exports = {
         try {
             // find(), sem parâmetros, retorna todos.
             const lista = await Matricula.find();
+            for (const matricula of lista) {
+                matricula.participante = await Participante.findById(matricula.participante._id);
+                matricula.palestra = await Palestra.findById(matricula.palestra._id);
+            };
             res.send(lista); // Enviamos a lista completa de matricula na resposta com o status implícito.
         } catch (erro) {
             console.log(erro);
@@ -29,6 +35,8 @@ module.exports = {
             const id = req.params.id;
             const matricula = await Matricula.findById(id); // Encontra a matricula pelo seu id e retorna um objeto.
             if (matricula) { // matricula foi encontrado.
+                matricula.participante = await Participante.findById(matricula.participante._id);
+                matricula.palestra = await Palestra.findById(matricula.palestra._id);
                 res.send(matricula); // Http 200 implícito.
             } else {
                 //Http 404: Not found.

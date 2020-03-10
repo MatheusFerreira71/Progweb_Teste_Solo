@@ -3,11 +3,11 @@ const mongoose = require('mongoose');
 //Criação do modelo de dados.
 const schema = mongoose.Schema({
     palestra: {
-        type: String, 
+        type: Object, 
         required: true
     },
     participante: {
-        type: String, 
+        type: Object, 
         required: true
     },
     presenca: {
