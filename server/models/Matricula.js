@@ -1,15 +1,13 @@
-import mongoose from 'mongoose';
-import Participante from './Participante'; // Importando o Participante para ser usado como um tipo de dado.
-import Palestra from './Palestra'; // Importando o Participante para ser usado como um tipo de dado.
+const mongoose = require('mongoose');
 
 //Criação do modelo de dados.
 const schema = mongoose.Schema({
     palestra: {
-        type: Palestra, //Note que o tipo de dado é o próprio modelo da palestra.
+        type: String, 
         required: true
     },
-    participate: {
-        type: Participante, //Note que o tipo de dado é o próprio modelo do participante.
+    participante: {
+        type: String, 
         required: true
     },
     presenca: {
@@ -25,4 +23,4 @@ const schema = mongoose.Schema({
 // 3° parametro: Nome da coleção => em que os objetos criados a partir do modelo serão armazenados no MongoDB
 
 // Exportação do modelo de dados.
-export default mongoose.model('Matricula', schema, 'matriculas');
+module.exports = mongoose.model('Matricula', schema, 'matriculas');

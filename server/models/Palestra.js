@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 //Criação do modelo de dados.
 const schema = mongoose.Schema({
@@ -21,4 +21,4 @@ const schema = mongoose.Schema({
 // 3° parametro: Nome da coleção => em que os objetos criados a partir do modelo serão armazenados no MongoDB
 
 // Exportação do modelo de dados.
-export default mongoose.model('Palestra', schema, 'palestras');
+module.exports = mongoose.model('Palestra', schema, 'palestras');

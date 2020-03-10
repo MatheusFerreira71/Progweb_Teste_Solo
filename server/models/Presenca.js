@@ -1,8 +1,7 @@
 //Esse modelo de dados representa a presença do participante no dia, como não iremos cadastrar os dias que os
 // eventos vão acontecer, apenas o participante estar nessa tabela contará como presença para ele.
 
-import mongoose from 'mongoose';
-import Participante from './Participante';
+const mongoose = require('mongoose');
 
 //Criação do modelo de dados.
 const schema = mongoose.Schema({
@@ -10,8 +9,8 @@ const schema = mongoose.Schema({
         type: Date,
         required: true
     },
-    participate: {
-        type: Participante, //Note que o tipo de dado é o próprio modelo do participante.
+    participante: {
+        type: String, 
         required: true
     }
 });
@@ -21,4 +20,4 @@ const schema = mongoose.Schema({
 // 3° parametro: Nome da coleção => em que os objetos criados a partir do modelo serão armazenados no MongoDB
 
 // Exportação do modelo de dados.
-export default mongoose.model('Presenca', schema, 'presencas');
+module.exports = mongoose.model('Presenca', schema, 'presencas');
